@@ -1,0 +1,1555 @@
+
+.welcome{
+  position: fixed;
+  width: 0ch;
+  top: 50%;
+  left: 50%;
+  height: 5%;
+  margin-top: -80px;
+  margin-left: -155px;
+  font-size: 175%;
+  overflow: hidden;
+  overflow-wrap: break-word;
+  background-color: white;
+ /* border-right: solid darkred;*/
+  animation: typing 3s steps(25);
+  animation-delay: 2.2s;
+  white-space: nowrap;
+  animation-fill-mode: forwards;
+  font-weight: bold;
+  color: PaleVioletRed;
+}
+
+
+.loadingWhileFetch{
+    font-size: 175%;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    margin-top: -47px;
+    margin-left: -260px;
+    font-weight: bold;
+    color: grey;
+}
+
+@keyframes typing {
+    from{
+        /*left: 0;*/
+        border-right: solid darkred;
+        width: 0ch;
+        /*height: auto;*/
+    }
+    to{
+        /*left: 100%;*/
+        border-right: solid darkred;
+        width:23ch;
+
+        /*height: 10px;*/
+    }
+
+}
+
+.man1{
+
+    position: absolute;
+    text-align: left;
+    margin-top: 5%;
+    animation: wholething 2s ease-out;
+    animation-fill-mode: forwards;
+}
+
+@keyframes wholething {
+    0%{
+        transform: translateX(0px);
+    }
+    100%{
+        transform: translateX(220px);
+
+
+    }
+}
+
+#RightLeg{
+    transform-origin: top;
+    transform-box: fill-box;
+
+    animation: pedentry 0.6s 3.8 alternate;
+
+}
+@keyframes pedentry {
+    from{
+        transform: rotateZ(10deg);
+    }
+    to{
+        transform: rotateZ(-23deg);
+    }
+
+
+}
+#LeftLeg{
+    transform-origin: top;
+    transform-box: fill-box;
+    animation: pedentry2 0.6s 3.9 alternate;
+}
+
+#RightHand{
+    transform-origin: inherit;
+    transform-box: fill-box;
+    animation: righthand 2s ease-out;
+}
+@keyframes righthand {
+    from {
+
+        transform: rotateZ(38deg);
+    }
+    to {
+        transform: rotateZ(0deg);
+    }
+}
+
+#LeftHand{
+    transform-origin: inherit;
+    transform-box: fill-box;
+    animation: lefthand 1.8s ease-out;
+    animation-fill-mode: forwards;
+}
+@keyframes lefthand {
+    from {
+
+        transform: rotateZ(45deg);
+    }
+    to {
+        transform: rotateZ(15deg);
+    }
+}
+
+
+@keyframes pedentry2 {
+   from{
+        transform: rotateZ(-2deg);
+    }
+    to{
+        transform: rotateZ(20deg);
+    }
+
+}
+@media (max-width: 800px){
+    .man1{
+        display: none;
+    }
+}
+@import url('https://fonts.googleapis.com/css2?family=Bungee+Shade&display=swap');
+
+.fontheader{
+    font-family: 'Bungee Shade', cursive;
+}
+
+
+
+/*all other app goes here*/
+
+.containerForChat{
+    display: grid;
+    position: fixed;
+    margin-left: -20%;
+    margin-top: -18%;
+    top: 55%;
+    left: 50%;
+    width: 36%;
+    height: 79.4%;
+    /*opacity: 70%;*/
+    background-color: darkslategray;
+    animation: popsup 2.5s linear;
+    box-shadow: 10px -7px 19px black;
+    border: 1px solid whitesmoke;
+    border-style: outset;
+    position: fixed;
+    overflow: hidden;
+    scrollbar-width: normal;
+    /*z-index: -1;*/
+    overflow-y: scroll;
+}
+.containerForChat::-webkit-scrollbar{
+    width: 0vh;
+}
+.containerForChat::-webkit-scrollbar-thumb{
+    background-color: darkslategray;
+}
+.containerForChat::-webkit-scrollbar-track{
+    background-color: darkslategray;
+}
+
+
+@keyframes popsup{
+    0%{
+        transform: scale(0);
+    }
+    100%{
+        transform: scale(1);
+    }
+}
+
+
+body{
+    top: 0;
+    left: 0;
+    margin: 0;
+    padding: 0;
+}
+::selection{
+    color: purple;
+    background: white;
+}
+.navbar{
+     width: 100%;
+     height: 9%;
+     /*opacity: 83%;*/
+     background: rgba(0, 0, 0, 0.83);
+     padding-left: 3%;
+     /*background-color: black;*/
+     position: fixed;
+     font-size: min(3vh,1.7vw);
+     box-shadow: 1px 3px 10px firebrick;
+}
+
+.mainimage{
+    top: 0;
+    left: 0;
+    position: fixed;
+    height: 100vh;
+    width: 100vw;
+    z-index: -1;
+}
+.logo{
+    /*text-shadow: 2px 2px 4px #000000;*/
+    position: relative;
+    height: 96%;
+    width: 14%;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Rampart+One&display=swap');
+.profile{
+    position: relative;
+    display: inline-block;
+    color: white;
+    font-size: 0.9em;
+    bottom: 36%;
+    left: 1.3%;
+    padding-right: 1%;
+    text-decoration: none;
+    font-family: fantasy;
+    /*margin-left: 1%;
+    margin-top: 1.5%;
+*/
+}
+
+.profileFont{
+    font-family: 'Rampart One', cursive;
+}
+
+.profile:hover{
+    color: cyan;
+    cursor: pointer;
+    transform: scale(1.1);
+
+}
+.profileBackButton{
+    position: fixed;
+    color: transparent;
+    background: linear-gradient(to bottom,white,goldenrod,lawngreen);
+    background-clip: text;
+    width: 20%;
+    top: 3.5%;
+    left: -4%;
+    font-size: 150%;
+    cursor: pointer;
+    font-weight: bold;
+    text-align: center;
+    font-family: sans-serif;
+    animation: profilebackbutton 3s ease-in;
+}
+
+@keyframes profilebackbutton{
+    0%{
+        transform: scale(0);
+    }
+    100%{
+        transform: scale(1);
+    }
+}
+.profileBackButton:active {
+    transform: scale(0.78);
+}
+.profileBackButton span:before{
+    content: '\00bb';
+    position: absolute;
+    opacity: 1;
+    top: -30%;
+    font-size: 140%;
+    right: 59%;
+    opacity: 0;
+    color: red;
+    direction: rtl;
+}
+
+.profileBackButton:hover span{
+    transition: margin-left 1s;
+    margin-left: 10%;
+}
+.profileBackButton:hover span:before{
+    transition: margin-right 1s, opacity 1s;
+    margin-right: -2%;
+    opacity: 1;
+}
+/*for browser resize*/
+
+@media screen and (max-width: 800px) and (max-height: 500px){
+    .Mainclass{
+        display: none;
+        background-color: black;
+    }
+}
+
+.profileimageheader{
+    position: absolute;
+    float: left;
+    top: 0;
+    left: 0;
+    width: 40%;
+    margin-left: -38%;
+    height: auto;
+    clip-path: circle(50% at 50% 50%);
+}
+.profileimageheadername{
+    float: left;
+    font-style: italic;
+    margin-top: 2%;
+    margin-left: 10%;
+}
+
+.logout{
+    position: relative;
+    display: inline-block;
+    color: white;
+    font-size: 0.9em;
+    /*bottom: 30%;*/
+    /*right: -10%;*/
+    /*padding-right: 1%;*/
+    text-decoration: none;
+    font-family: fantasy;
+    float: right;
+    margin-right: 5%;
+    margin-top: 1.2%;
+
+}
+.logoutFont{
+    font-family: 'Rampart One', cursive;
+}
+
+.logout:hover{
+    color: cyan;
+    cursor: pointer;
+    transform: scale(1.1);
+
+}
+
+/*for search*/
+.search{
+    position: relative;
+    display: inline-block;
+    color: white;
+    font-size: 0.9em;
+    float: right;
+    padding-right: 5%;
+    padding-top: 0.7%;
+    font-family: sans-serif;
+    border-style: none;
+
+}
+
+.searchwithlogin{
+    position: relative;
+    display: inline-block;
+    color: white;
+    padding-top: 0.7%;
+    font-size: 0.9em;
+    float: right;
+    padding-right: 2%;
+    font-family: sans-serif;
+    border-style: none;
+}
+.searchFont{
+    font-family: 'Rampart One', cursive;
+}
+
+.search:hover{
+    color: cyan;
+    cursor: pointer;
+    transform: scale(1.1);
+}
+.inputborder{
+    border-style: none;
+    border-radius: 25px;
+    height: 30px;
+    border: 2px solid black;
+    box-shadow: grey;
+}
+.inputborder:hover{
+    border: 3px solid cyan;
+}
+.inputborder:focus{
+    outline: none;
+    border: 1px solid red;
+}
+
+/*header section*/
+@import url('https://fonts.googleapis.com/css2?family=Akronim&family=Big+Shoulders+Inline+Display:wght@100&family=Bungee+Outline&family=Ewert&family=Frijole&family=Geostar&family=Sevillana&family=Shojumaru&family=Nosifer&family=DotGothic16&family=Frijole&family=Geostar&family=Geostar+Fill&family=Monoton&family=Orbitron:wght@500&family=Plaster&family=Press+Start+2P&family=Special+Elite&family=Yuji+Mai&display=swap');
+.blackOut{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(18.4,31,31,0.5);
+    /*opacity: 0.7;*/
+
+}
+.headerSection{
+    text-align: center;
+    /*margin-top: -1%;*/
+    background-color: darkred;
+    width: 36vw;
+    height: 7vh;
+    border-bottom: 1px solid black;
+    border-bottom-style: outset;
+    box-shadow: 1px 5px 7px black;
+    position: fixed;
+    opacity: 1;
+    font-family: serif;
+    z-index: 1;
+
+}
+.headerSectionText{
+    font-family: 'Bungee Outline', cursive;
+    position: absolute;
+    margin-top: 2%;
+    margin-left: 38%;
+    position: absolute;
+    color: cornsilk;
+    text-shadow: 5px 5px 1px black;
+}
+
+
+/*search bar of header in chat section*/
+.searchbar{
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin-left: 1.7%;
+    margin-top: 1.6%;
+    font-size: 1.76em;
+    color: cornsilk;
+    background: transparent;
+    cursor: pointer;
+    border: none;
+}
+
+
+@keyframes toggleit {
+    100%{
+        transform: rotate(90deg);
+    }
+}
+
+.headerList{
+    position: fixed;
+    float: left;
+    background-color: black;
+    /*list-style-type: square;*/
+    /*border-top-color: red;*/
+    border: 3px solid darkgreen;
+    margin-top: 3.35%;
+    margin-left: 0.12%;
+    width: 10%;
+    font-family: sans-serif;
+    font-weight: bold;
+    padding-top: 8%;
+    padding-left: 2.5%;
+    text-align: left;
+    padding-bottom: 1%;
+    border-style: inset;
+    /*border-radius: 30%/80% 90% 0% 0%:*/
+    /*shape-outside: border-box;*/
+    /*transform: skewZ(30deg);*/
+    box-shadow: 5px 5px 15px black;
+    clip-path: polygon(17% 0, 100% 19%, 100% 100%, 0 100%, 0 23%);
+    color: firebrick;
+    line-height: 1.8em;
+}
+
+.uploadImage{
+    margin-left: -20%;
+}
+
+.uploadImageButton{
+    border: none;
+    background: transparent;
+    position: absolute;
+    font-size: 90%;
+    font-weight: bold;
+    margin-top: 0.8%;
+    color: limegreen;
+}
+.uploadImageButton:active{
+    transform: scale(0.9);
+}
+.uploadImageButton:hover{
+    cursor: pointer;
+}
+.fileupload{
+    margin-left: 0%;
+    z-index: 1;
+    margin-top:-1%;
+    position:absolute;
+    width:15%;
+    opacity:0;
+
+}
+.fileupload:hover{
+    cursor: pointer;
+}
+.popupMessage{
+    position: fixed;
+    top: 45%;
+    left: 30%;
+    background-color: white;
+    width: 35%;
+    height: 10%;
+    text-align: center;
+    border-radius: 10%;
+    background-image: linear-gradient(to right,blue,green,red);
+    animation: appearpopup 2s linear;
+}
+@keyframes appearpopup{
+    from{
+        z-index: -1;
+        opacity: 0;
+    }
+    to{
+        z-index: 1;
+        opacity: 1;
+    }
+}
+.popupText{
+   float: left;
+}
+.headerName{
+    /*line-height: -2em;*/
+    color: greenyellow;
+    position: absolute;
+    display: inline;
+    margin-top: -40%;
+    font-size: 126%;
+    font-weight: bold;
+    margin-left: 3%;
+    float: left;
+    text-decoration: underline;
+    /*background-color: red;*/
+    /*margin-bottom: -10%;*/
+    /*overflow-x: hidden;*/
+    list-style-type: none;
+    /*padding-bottom: -10%;*/
+}
+
+/*
+.headerList::after {
+    position: fixed;
+    content: "";
+    width: 3%;
+    height: 10%;
+    background-color: darkslategray;
+    border: 4px solid red;
+    margin-left: -4.1%;
+    margin-top: -12.2%;
+    transform: skewX(-25deg);
+    border: none;
+
+    clip-path: polygon(35%  16%, 44% 25%, 96% 100%, 110% 0, 27% 0);
+}*/
+
+
+
+/*for popup*/
+
+.popupBack{
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: 1;
+    height: 100vh;
+    width: 100vw;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.popupMain{
+    position: absolute;
+    margin-left: -6%;
+    background-color: lightseagreen;
+    border-style: inset;
+    border-color: darksalmon;
+    border-radius: 10px;
+    width: 30%;
+    /*padding: -1%;*/
+    font-family: 'Sevillana' cursive;
+    animation: popupAnim 0.7s ease-out;
+    box-shadow: 1px 5px 10px black;
+
+}
+@keyframes popupAnim{
+    0%{
+        transform: translateY(-50vh) rotateX(0deg);
+    }
+    25%{
+        transform: translateY(-38vh) rotateX(360deg);
+    }
+    50%{
+        transform: translateY(-25vh) rotateX(0deg);
+    }
+    75%{
+        transform: translateY(-13vh) rotateX(360deg);
+    }
+    100%{
+        transform: translateY(0vh);
+    }
+}
+.popupImage{
+    position: sticky;
+    width: 26%;
+    float: left;
+    image-rendering: crisp-edges;
+    image-rendering: pixelated;
+    transform: scale(-1,1);
+    margin-left: 5%;
+}
+.popupText{
+    position: absolute;
+    margin-left: 33%;
+    margin-top: 2%;
+    z-index: 1;
+    color: whitesmoke;
+}
+.popupButton{
+    position: sticky;
+    margin-top: 30%;
+    margin-left: 15%;
+    width: 25%;
+    border-radius: 7px;
+    border-style: outset;
+    font-family: sans-serif fantasy;
+    background-color: darksalmon;
+    padding: 1.4%;
+    /*box-sizing: border-box;*/
+    box-shadow: 2px 2px 10px black;
+    color: navy;
+}
+.popupButton:hover{
+    background-color: lightcoral;
+
+}
+.popupButton:active{
+    animation: clickingeffect 0.1s linear;
+
+
+}
+@keyframes clickingeffect{
+    from{
+        transform: translateY(0px);
+    }
+    to{
+        transform: translateY(5px);
+    }
+}
+
+.chatList{
+    position: absolute;
+    list-style-type: none;
+    color: whitesmoke;
+    font-family: monospace;
+    top: 8%;
+
+    width: 100%;
+    margin-top: 0;
+    padding-left: 0;
+    padding-top: 4%;
+    /*z-index: -1;*/
+    display: inline-block;
+}
+
+.titleList{
+    font-family: 'Frijole', cursive;
+    color: white;
+    margin-left: 14%;
+    margin-top: 0.4%;
+    cursor: pointer;
+
+}
+
+.titleList:hover {
+    color: tomato;
+    animation: titless 1s ease-out;
+}
+@keyframes titless{
+    50%{
+        letter-spacing: 10px;
+    }
+    100%{
+        letter-spacing: 0px;
+    }
+
+}
+.contentList{
+    font-family: 'Sevillana',cursive;
+    color: darkorange;
+    padding-left: 14%;
+    padding-bottom: 1.4%;
+    border-bottom: 1px solid black;
+/*border-bottom-style: inset;*/}
+
+/*@import url('https://fonts.googleapis.com/css2?
+family=Akronim&
+family=Big+Shoulders+Inline+Display:wght@100&
+family=Bungee+Outline&
+family=Ewert&
+family=Frijole&
+family=Geostar&
+family=Sevillana&
+family=Shojumaru&display=swap');*/
+.imageList{
+    position: absolute;
+    float: left;
+    max-width: 10%;
+    min-width: 10%;
+    height: auto;
+    image-rendering: pixelated;
+    clip-path: circle(48%);
+    display: inline;
+    margin-left: 1%;
+}
+.starList{
+    position: absolute;
+    right: 3%;
+    margin-top: -2%;
+}
+.starSelf{
+    float: right;
+    width: 150%;
+    height: auto;
+    color: gold;
+    box-shadow: 4px 5px 5px black;
+}
+.starSelf:hover {
+    width: 180%;
+    height: auto;
+    cursor: all-scroll;
+    animation: iconRoting 1s linear infinite;
+    transform-origin: top;
+
+}
+@keyframes iconRoting{
+    0%{
+        transform: rotateZ(-45deg);
+    }
+    50%{
+        transform: rotateZ(45deg);
+    }
+    100%{
+        transform: rotateZ(-45deg);
+    }
+}
+
+/*PROFILE PAGE*/
+
+.profilePage{
+    top: 0;
+    left: 0;
+    background-color: black;
+    height: 100vh;
+    width: 100vw;
+    opacity: 0.9;
+    color: white;
+    overflow: hidden;
+}
+.redArrow{
+    position: fixed;
+    /*opacity: 0;*/
+    background-color: rgb(237,46,46);
+    height: 21%;
+    width: 40%;
+    top: 35%;
+    left: 20%;
+    /*margin-left: -30%;*/
+    clip-path: polygon(0 8%, 96% 9%, 62% 46%, 100% 88%, 0 88%);
+    overflow: visible;
+    /*border-left-style: inset;*/
+}
+.blueArrow{
+    position: fixed;
+    /*opacity: 0;*/
+    background-color: rgb(43,43,234);
+    height: 23%;
+    width: 43%;
+    top: 40%;
+    right:20%;
+    overflow: visible;
+    clip-path: polygon(9% 15%, 100% 13%, 100% 85%, 0 85%, 48% 54%);
+}
+
+.backimage{
+    position: fixed;
+    /*opacity: 0;*/
+    height: auto;
+    width: 11.45%;
+    left: 8.7%;
+    top: 35.8%;
+    /*margin-left: -11%;*/
+    transform: scale(-1,1);
+}
+.backimage,.redArrow{
+    margin-left: -70%;
+    animation: crossing 3s linear;
+    animation-delay: 2s;
+}
+@keyframes crossing{
+    60%{
+        opacity: 1;
+        /*left: 50%;*/
+    }
+    100%{
+        opacity: 0;
+        margin-left: 100%;
+    }
+}
+.bluebackimage{
+    /*opacity: 0;*/
+    position: fixed;
+    height: auto;
+    width: 11.42%;
+    right: 9%;
+    top: 41.9%;
+}
+.bluebackimage,.blueArrow{
+    opacity: 1;
+
+    margin-right:-70%;
+
+    animation: crossing2 3s linear;
+    animation-delay: 2s;
+}
+@keyframes crossing2{
+    60%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+        transform: translateX(-170vw);
+
+    }
+}
+
+.fireworks{
+    position: fixed;
+    top: 10%;
+    left: 17%;
+    height: auto;
+    width: 60%;
+    /*display: none;*/
+    /*opacity: 0;*/
+    visibility: hidden;
+    image-rendering: crisp-edge;
+    animation: firework 2.5s;
+    /*animation-fill-mode: forwards;*/
+    z-index: -1;
+    animation-delay: 3.8s;
+}
+@keyframes firework{
+    0%{
+        visibility: visible;
+    }
+}
+
+.profileText{
+    position: fixed;
+    top: 33%;
+    left: 25%;
+    font-size: 500%;
+    font-family: 'Nosifer', cursive;
+    color: transparent;
+    background: linear-gradient(orange,red);
+    background-clip: text;
+    margin-left: -2%;
+    z-index: -2;
+    visibility: hidden;
+    /*font-weight: bold;*/
+    animation: nameAnim 5s ease-out;
+    animation-delay: 4.1s;
+    transform: scale(0);
+}
+@keyframes nameAnim{
+    0%{
+        transform: scale(0) rotate(0deg);
+    }
+    15%{
+        visibility: visible;
+        transform: scale(0.4) rotateY(180deg);
+    }
+    75%{
+        transform: scale(0.7) rotateY(0deg);
+    }
+    90%{
+        /*visibility: visible;*/
+        transform: scale(1);
+    }
+    100%{
+        transform: scale(0);
+    }
+}
+
+.smilehome{
+    position: absolute;
+    color: orange;
+    width: 5%;
+    height: auto;
+    margin-top: -7px;
+    margin-left: 1%;
+}
+.textProfile{
+    position: fixed;
+    top:10%;
+    left: 20%;
+    padding: 2%;
+    width: 60%;
+    /*width: auto;*/
+    /*border: 2px solid cyan;*/
+    /*border-style: inset;*/
+
+}
+.headertextProfile{
+    /*padding-right: 1%;*/
+    float: left;
+    color: transparent;
+    background: linear-gradient(red,whitesmoke);
+    background-clip: text;
+    font-family: 'Ewert' ,cursive;
+    animation: headerAnim 4s;
+}
+@keyframes headerAnim{
+    0%{
+        margin-top: -40%;
+    }
+}
+.emoji{
+    position: fixed;
+    float: left;
+    opacity: 0;
+    margin-left: 52%;
+    animation: emojiAnim 4s ease-in-out;
+    animation-delay: 2s;
+    animation-fill-mode: forwards;
+}
+@keyframes emojiAnim{
+    0%{
+        transform: scale(1000%);
+    }
+    100%{
+        transform: scale(100%);
+        opacity: 1;
+    }
+}
+
+.frontandback{
+    position: fixed;
+    /*float: left;*/
+    top: 120%;
+    left: -20%;
+    color: gold;
+    font-family: 'Shojumaru',cursive;
+    font-style: oblique;
+    font-size: 90%;
+    animation: frontbackAnim 3.5s ease-in-out;
+    animation-fill-mode: forwards;
+}
+
+@keyframes frontbackAnim{
+    0%{
+        transform: rotateZ(360deg);
+    }
+    100%{
+        top: 24%;
+        left: 22%;
+    }
+}
+.myname{
+    position: fixed;
+    /*float: left;*/
+    /*margin-left: 2%;*/
+    top: -10%;
+    left: -10%;
+    margin-top: -20%;
+    font-size: 110%;
+    font-weight: bold;
+    margin-top: 1.6%;
+    color: cyan;
+    font-style: italic;
+    font-family: 'serif',cursive;
+    animation: mynameAnim 4s ease-in-out;
+    animation-delay: 2s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes mynameAnim{
+    0%{
+        transform: rotateX(180deg) rotateY(190deg);
+    }
+    100%{
+        top: 22.5%;
+        left: 39%;
+    }
+}
+.detailText{
+    position: absolute;
+    margin-top: 11%;
+    color: gold;
+    font-family: 'Shojumaru',cursive;
+    font-style: oblique;
+    font-size: 90%;
+    float: left;
+}
+.detail{
+    position: absolute;
+    float: left;
+    margin-top: 10.9%;
+    margin-left: 16%;
+    color: cyan;
+    font-weight: bolder;
+    font-style: italic;
+    font-size: 104%;
+}
+
+.detailclass{
+    position: fixed;
+    width: 65%;
+    animation: delailclassAnim 5s;
+}
+@keyframes delailclassAnim{
+    0%{
+        top: 120%;
+    }
+    100%{
+        top: 17%;
+    }
+}
+
+
+/*login form*/
+.loginform{
+
+    position: absolute;
+    top: 30%;
+    left: 28%;
+    background-color: white;
+    /*opacity: 200%;*/
+    width: 35vw;
+    height: auto;
+    padding: 3%;
+    padding-bottom: 1.4%;
+    border: 2px solid crimson;
+    border-style: inset;
+    border-radius: 20px;
+}
+.fullnames{
+    position: absolute;
+    display: inline;
+    margin-top: -2%;
+    font-size: 102%;
+    letter-spacing: 0.5px;
+    color: firebrick;
+    font-family: serif;
+}
+
+.fullnameinput{
+    position: absolute;
+    border-radius: 4px;
+    margin-top: -1%;
+    border-color: crimson;
+    border-style: inset;
+    width: 40%;
+    overflow: hidden;
+    box-shadow: 1px 2px 3px black;
+}
+.fullnameinput:hover{
+    border-color: cyan;
+}
+.fullnameinput:focus{
+    border-color: cyan;
+}
+
+.fullnameinputs{
+    position: absolute;
+    border-radius: 4px;
+    margin-top: -5.5%;
+    margin-left: 25%;
+    border-color: crimson;
+    border-style: inset;
+    width: 40%;
+    overflow: hidden;
+    box-shadow: 1px 2px 3px black;
+}
+.fullnameinputs:hover{
+    border-color: cyan;
+}
+.fullnameinputs:focus{
+    border-color: cyan;
+}
+
+.emails{
+    position: absolute;
+    display: inline;
+    margin-top: -5%;
+    margin-left: 47%;
+    font-size: 102%;
+    letter-spacing: 0.5px;
+    color: firebrick;
+    font-family: serif;
+}
+.emailsinput{
+    position: absolute;
+    border-radius: 4px;
+    margin-top: -4.2%;
+    margin-left: 47%;
+    border-color: crimson;
+    border-style: inset;
+    width: 40%;
+    overflow: hidden;
+    box-shadow: 1px 2px 3px black;
+}
+
+.emailsinput:hover{
+    border-color: cyan;
+}
+.emailsinput:focus{
+    border-color: cyan;
+}
+
+.passwords{
+    position: absolute;
+    display: inline;
+    margin-top: 1%;
+    margin-left: 5%%;
+    font-size: 102%;
+    letter-spacing: 0.5px;
+    color: firebrick;
+    font-family: serif;
+}
+
+.passwordinput{
+    position: absolute;
+    border-radius: 4px;
+    margin-top: 2%;
+    margin-left: 0%;
+    border-color: crimson;
+    border-style: inset;
+    width: 40%;
+    overflow: hidden;
+    box-shadow: 1px 2px 3px black;
+}
+
+.passwordinput:hover{
+    border-color: cyan;
+}
+.passwordinput:focus{
+    border-color: cyan;
+}
+
+.submit{
+    /*position: absolute;*/
+    border-radius: 4px;
+    /*display: inline-block;*/
+    margin-top: 10%;
+    background-color: lightcoral;
+    margin-left: 39%;
+    border-color: crimson;
+    border-style: inset;
+    color: white;
+    width: 30%;
+    font-family: sans-serif;
+    font-weight: bold;
+    overflow: hidden;
+    box-shadow: 1px 2px 3px black;
+}
+
+.submit:hover{
+    background-color: lightcoral;
+
+}
+.submit:active{
+    animation: clickingeffectsubmit 0.1s linear;
+
+
+}
+@keyframes clickingeffectsubmit{
+    from{
+        transform: translateY(0px);
+    }
+    to{
+        transform: translateY(5px);
+    }
+}
+
+/*Adding the users for normal chat*/
+
+
+.addUser{
+    position: fixed;
+    top: 82%;
+    left: 65%;
+    color: darkorange;
+    font-size: 235%;
+    cursor: pointer;
+    /*z-index: 10;*/
+    opacity: 0;
+
+    animation: visibliling 1s ease-in;
+    animation-delay: 3s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes visibliling {
+    50%{
+        opacity: 0;
+    }
+    100%{
+        top: 82%;
+        left: 61%;
+        opacity: 1;
+    }
+}
+.blackOuts{
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(18.4,31,31,0.5);
+    /*opacity: 0.7;*/
+
+}
+.closebtun{
+    position: fixed;
+    margin-top: -4%;
+    margin-left: 35.2%;
+    font-size: 158%;
+    background-color: transparent;
+    border: none;
+    z-index: 3;
+    transform: rotate(45deg);
+    font-weight: bold;
+    color: darkred;
+    cursor: pointer;
+}
+
+.closebtun:active{
+    transform: translateY(1px) rotate(45deg);
+}
+.closebtun:hover{
+    color: black;
+}
+
+.submitbtun{
+    position: fixed;
+    margin-top: -0.4%;
+    margin-left: 31.4%;
+    font-size: 100%;
+    background-color: lightgrey;
+    border: none;
+    border-radius: 10px;
+    z-index: 3;
+    font-weight: bold;
+    color: darkred;
+    cursor: pointer;
+}
+
+.submitbtun:active{
+    transform: translateY(1px);
+}
+.submitbtun:hover{
+    color: crimson;
+}
+/*chatbox*/
+.manageheader{
+    position: fixed;
+    margin-top: -17.7%;
+    z-index: 1;
+    width: auto;
+}
+.backbutton{
+    top: 10%;
+    height: 80%;
+    left: 2%;
+    width: auto;
+    position: absolute;
+    cursor: pointer;
+    color: white;
+}
+/*this is breakthrough hahaha*/
+/*hover on a class run a other id */
+.backbutton:hover #hand{
+    animation: clickingeffect 1.5s ease-in;
+    animation-fill-mode: forwards;
+}
+@keyframes clickingeffect {
+    75%{
+        transform: translateY(0%);
+    }
+    100%{
+        transform-origin: top;
+        transform: rotate3d(2, 0, 0, 25deg);
+    }
+}
+.backbutton:hover #other{
+    animation: clickingeffect2 1.8s ease-in;
+    animation-fill-mode: forwards;
+}
+@keyframes clickingeffect2 {
+    100%{
+        transform-origin: bottom;
+        transform: rotate3d(-1, 0, 0, 15deg);
+    }
+}
+
+
+.headerSectionText1{
+    position: absolute;
+    margin-top: 2%;
+    font-family: 'Bungee Outline', cursive;
+    position: absolute;
+    margin-left: 38%;
+    position: absolute;
+    color: cornsilk;
+    text-shadow: 5px 5px 1px black;
+    z-index: 1;
+}
+.chattext{
+    padding-top: 1%;
+    box-shadow: 1px 5px 4px black;
+    padding-bottom: 2%;
+    padding-left: 1%;
+    color: blue;
+    position: fixed;
+    height: -1%;
+    width: 35%;
+    border-radius: 20px;
+    display: inline;
+    /*margin-left: 50%;*/
+    /*margin-top: 50%;*/
+    top: 85%;
+    left: 30%;
+    z-index: 1;
+}
+.mainchatcontainer{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-color: lightblue;
+}
+.chatcontainer{
+    position:fixed;
+    margin-top: 2%;
+    top: 17%;
+    width: 36%;
+    height: 62%;
+    display: flex;
+    /*overflow: hidden;*/
+    background-color: lightblue;
+    scrollbar-width: normal;
+    /*z-index: -1;*/
+    overflow-y: scroll;
+}
+.chatcontainer::-webkit-scrollbar{
+    width: 0vh;
+}
+
+
+.usermessages{
+    position: absolute;
+    top: -20%;
+    left: 1%;
+    height: 100%;
+    width: 96%;
+    direction: rtl;
+    padding: 1%;
+    padding-top: 20%;
+    /*padding-bottom: 15%;*/
+    list-style-type: none;
+    list-style: none;
+    line-height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    /*flex-wrap: wrap;*/
+    /*overflow:visible;*/
+}
+.chatboxli{
+    line-height: 100%;
+}
+.chatbox2{
+    direction: ltr;
+    margin-left: auto;
+}
+.chatboxtext1{
+    background-color: darkorange;
+    color: white;
+    border-radius: 25px;
+    height: auto;
+    width: auto;
+    padding: 1%;
+    margin-bottom: 5%;
+    display: inline-block;
+    /*display: flex;*/
+    /*justify-self: flex-start;*/
+    padding-right: 2%;
+    text-align: right;
+    box-shadow: 1px 4px 3px black;
+}
+
+.chatboxtext2{
+    background-color: teal;
+    color: white;
+    border-radius: 25px;
+    height: auto;
+    width: auto;
+    padding: 2%;
+    margin-bottom: 5%;
+    /*padding-right: 11%;*/
+    padding-left: 8%;
+    display: inline-block;
+    box-shadow: 1px 4px 3px black;
+    text-align: left;
+    /*justify-content: left;*/
+    /*justify-self: left;*/
+}
+
+/*back button animatio*/
+#hand {
+    fill: whitesmoke;
+    transform: translateY(150%);
+    /*opacity: 0;*/
+}
+#other{
+    fill: whitesmoke;
+}
+
+.chatboxinput {
+    position:absolute;
+    top: 0;
+    left: 0;
+    color: tomato;
+    float:right;
+    width: 97%;
+    height: 100%;
+    border-radius: 20px;
+    border-style: solid;
+    border-width: 2px;
+    border-color: green;
+    font-size: 110%;
+    text-align: right;
+    background-color: whitesmoke;
+    box-shadow: 1px 3px 4px black;
+    padding-right: 2%;
+    caret-width: 2px;
+}
+
+.chatboxinput:focus{
+    border-color: green;
+    outline: none;
+}
+
+.namecontain{
+    position: fixed;
+    top: 16%;
+    left: 48%;
+    opacity: 0;
+    overflow: hidden;
+    width: 17%;
+    height: 7%;
+    display: inline-block;
+    z-index: 0;
+    background-color: black;
+    border:2px darkgreen;
+    border-style: solid;
+    border-radius: 10px;
+    outline:inset 3px green;
+    box-shadow: 2px 2px 20px black;
+    animation: nameanimation 1s ease-in;
+    animation-fill-mode: forwards;
+}
+@keyframes nameanimation{
+    100%{
+    top: 25%;
+    left: 48%;
+    opacity: 1;
+    }
+}
+.covername{
+    background-color: black;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+    animation: nametypings 1.7s linear,
+                blink-caret .75s steps(90) infinite;
+    animation-fill-mode: forwards;
+    animation-delay: 1.1s;
+}
+.namefill{
+    margin-top: 3.5%;
+    position: absolute;
+    color: lawngreen;
+    font-size: 120%;
+    font-weight: bolder;
+    overflow: hidden;
+    z-index: 10;
+    width: 100%;
+    text-align: center;
+    border-right: .3em solid green;
+    display: inline-block;
+    white-space: nowrap;
+    letter-spacing: .2em;
+    font-family: 'Geostar', cursive;
+
+}
+
+@keyframes nametypings{
+    100%{
+        transform: translateX(100%);
+     }
+}
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: limegreen; }
+}
+/* all css written by me no copy paste only written by my logic */
+
+
+
+
+
+
+
+
